@@ -26,8 +26,16 @@
     this.talkList = [{
       body: "I am bored."
     },{
-      body: "Teach something if you have time."
+      body: "Teach me something if you have time."
     }];
+
+    this.remove = function(event) {
+			console.log('EVENT:', event);
+			var talkObj = event.item;
+			var index = that.talkList.indexOf(talkObj);
+			that.talkList.splice(index, 1);
+			that.update();
+		};
 
 	</script>
 
